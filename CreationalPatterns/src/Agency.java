@@ -112,6 +112,14 @@ public class Agency {
         this.numOfBoats = numOfBoats;
     }
 
+    public void setVehicles(ArrayList<Vehicle> vehicles) {
+        this.vehicles = vehicles;
+    }
+
+    public Map<Passenger, Vehicle> getMapPassengerVehicle() {
+        return mapPassengerVehicle;
+    }
+
     @Override
     public String toString() {
         return "\nAgency{" +

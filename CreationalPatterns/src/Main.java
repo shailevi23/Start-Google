@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
@@ -15,6 +16,9 @@ public class Main {
             agency.assign(passengers[i]);
         }
 
-        System.out.println(agency.toString());
+        Map<Passenger, Vehicle> vehiclePassengerMap = agency.getMapPassengerVehicle();
+        for (Map.Entry<Passenger,Vehicle> entry: vehiclePassengerMap.entrySet()) {
+            entry.getValue().transport(entry.getKey());
+        }
     }
 }
