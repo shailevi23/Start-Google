@@ -2,71 +2,86 @@ package org.gfg;
 
 
 import org.apache.http.*;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.client.methods.*;
 import org.apache.http.impl.client.HttpClients;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 public class HttpFacade {
 
-    public HttpFacade(){
+    public HttpFacade() {
     }
 
     static ResponseObject sendHttpGETRequest(String url) {
+        HttpGet httpget = new HttpGet(url);
+        return sendCRUD(httpget);
+    }
+
+    public static ResponseObject sendHttpPOSTRequest (String url, List < NameValuePair > params){
         try {
-            HttpClient httpclient = new DefaultHttpClient();
-            HttpResponse response = httpclient.execute(new HttpGet(url));
-            StatusLine statusLine = response.getStatusLine();
-            if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
-                ByteArrayOutputStream out = new ByteArrayOutputStream();
-                response.getEntity().writeTo(out);
-                String responseString = out.toString();
-                out.close();
-                return ResponseObject.createResponseObject(response.getStatusLine().getStatusCode(), responseString);
-            } else {
-                response.getEntity().getContent().close();
-                throw new IOException(statusLine.getReasonPhrase());
-            }
-        } catch (ClientProtocolException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
+                HttpPost httppost = new HttpPost(url);
+                httppost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
+                return sendCRUD(httppost);
+        } catch (UnsupportedEncodingException e) {
+                throw new RuntimeException(e);
+        }
+    }
+    public static ResponseObject sendHttpPUTRequest (String url, List < NameValuePair > params) {
+        try {
+            HttpPut httpput = new HttpPut(url);
+            httpput.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
+            return sendCRUD(httpput);
+        } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         }
     }
-
-    public static ResponseObject sendHttpPOSTRequest(String url, List<NameValuePair> params){
-        HttpClient httpclient = HttpClients.createDefault();
-        HttpPost httppost = new HttpPost(url);
-        try{
-            httppost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
-            HttpResponse response = httpclient.execute(httppost);
-            HttpEntity entity = response.getEntity();
-
-            if (entity != null) {
-                    ByteArrayOutputStream out = new ByteArrayOutputStream();
-                    entity.writeTo(out);
-                    String responseString = out.toString();
-                    return ResponseObject.createResponseObject(response.getStatusLine().getStatusCode(), responseString);
-            }
-        } catch (UnsupportedEncodingException | ClientProtocolException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
+    public static ResponseObject sendHttpPATCHRequest (String url, List < NameValuePair > params) {
+        try {
+            HttpPatch httppatch = new HttpPatch (url);
+            httppatch.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
+            return sendCRUD(httppatch);
+        } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         }
-        return null;
     }
-    public void postRequest(){}
-    public void putRequest(){}
-    public void patchRequest(){}
-    public void deleteRequest(){}
+    public static ResponseObject sendHttpDELETERequest (String url) {
+        HttpDelete httpdelete = new HttpDelete(url);
+        return sendCRUD(httpdelete);
+    }
 
-    public ResponseObject
+    private static ResponseObject sendCRUD (HttpRequestBase crudOperation){
+        try {
+                HttpClient httpclient = HttpClients.createDefault();
+                HttpResponse response = httpclient.execute(crudOperation);
+                StatusLine statusLine = response.getStatusLine();
+                HttpEntity entity = response.getEntity();
+
+                if (statusLine.getStatusCode() >= 200 && statusLine.getStatusCode() < 300) {
+                    if (entity != null) {
+                        try (InputStream instream = entity.getContent()) {
+                            ByteArrayOutputStream out = new ByteArrayOutputStream();
+                            entity.writeTo(out);
+                            String responseString = out.toString();
+                            out.close();
+                            return ResponseObject.createResponseObject(response.getStatusLine().getStatusCode(), responseString);
+                        }
+                    }
+                    else{
+                        return ResponseObject.createResponseObject(response.getStatusLine().getStatusCode(), "no content");
+
+                    }
+                } else {
+                    response.getEntity().getContent().close();
+                    throw new IOException(statusLine.getReasonPhrase());
+                }
+            } catch (IOException e) {
+                throw new RuntimeException( "Run Time Exception" ,e);
+            }
+        }
 }
