@@ -7,6 +7,16 @@ abstract class AbstractAnimal implements Animal {
     Gender gender;
 
     @Override
+    public void roll() {
+        System.out.println("Animal rolling");
+    }
+
+    @Override
+    public void replicate() {
+        System.out.println("Animal replicate");
+    }
+
+    @Override
     public void move() {
         System.out.println("Move");
     }

@@ -28,6 +28,10 @@ public class Farmer {
     public void createRandomAnimal(){
         this.farm.acquire();
     }
+    public Horse createHorseAnimal(){
+        return this.farm.acquireHorse();
+    }
+
 
     public boolean checkAnimalMating(Animal animal){
         return this.farm.mateNewAnimal(animal);

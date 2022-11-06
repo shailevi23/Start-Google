@@ -1,6 +1,6 @@
 package org.example.App;
 
-class Horse extends AbstractAnimal{
+public class Horse extends AbstractAnimal{
 
     private Horse() {
     }

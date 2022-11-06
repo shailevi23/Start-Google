@@ -20,6 +20,16 @@ class ForwardingCat implements Animal{
     }
 
     @Override
+    public void roll() {
+
+    }
+
+    @Override
+    public void replicate() {
+
+    }
+
+    @Override
     public Animal mate(Animal animal) {
         cat.mate(animal);
         return cat;

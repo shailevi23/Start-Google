@@ -55,6 +55,10 @@ class Farm {
         }
     }
 
+    Horse acquireHorse(){
+        return Horse.newHorse(Generator.randomInt(0, 100), Generator.randomInt(0, 100), Generator.randomGender());
+    }
+
     boolean mateNewAnimal(Animal animal){
         boolean res = false;
         Iterator i = animalList.iterator();
