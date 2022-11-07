@@ -3,5 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/FarmAdapter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/FarmAdapter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/StructrualPatterns/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/StructrualPatterns/src/main/resources" charset="UTF-8" />
   </component>
 </project>
