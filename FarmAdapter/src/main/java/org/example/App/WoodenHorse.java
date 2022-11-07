@@ -3,11 +3,11 @@ package org.example.App;
 public class WoodenHorse implements WoodenStructures{
     @Override
     public void roll() {
-        System.out.println("Rolling like a horse!");
+        System.out.println("Rolling...");
     }
 
     @Override
-    public void replicate() {
-        System.out.println("Replicated like a horse!");
+    public WoodenStructures replicate() {
+        return new WoodenHorse();
     }
 }

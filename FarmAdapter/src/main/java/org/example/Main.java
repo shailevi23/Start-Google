@@ -8,19 +8,11 @@ public class Main {
 
         Horse horse = farmer.createHorseAnimal();
         WoodenStructures woodenHorse = new WoodenHorse();
-        WoodenStructures woodenHorseAdapter = new WoodenStructureAdapter(horse);
-
-        System.out.println("Horse:");
-        horse.roll();
-        horse.replicate();
+        WoodenStructureAdapter woodenHorseAdapter = new WoodenStructureAdapter(woodenHorse);
 
         System.out.println("woodenHorse:");
-        woodenHorse.roll();
-        woodenHorse.replicate();
-
-        System.out.println("woodenHorseAdapter:");
-        woodenHorseAdapter.roll();
-        woodenHorseAdapter.replicate();
+        woodenHorseAdapter.move();
+        System.out.println(woodenHorseAdapter.mate(horse));
 
     }
 }
