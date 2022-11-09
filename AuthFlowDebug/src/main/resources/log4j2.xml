@@ -4,7 +4,7 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
-        <File name="MyFile" fileName="logs/app.log">
+        <File name="MyFile" fileName="AuthFlowDebug/logs/app.log">
             <PatternLayout pattern="%d %-7level %logger{36} - %msg%n"/>
         </File>
     </Appenders>
