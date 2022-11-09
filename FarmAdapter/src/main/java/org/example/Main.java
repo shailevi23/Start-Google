@@ -2,6 +2,10 @@ package org.example;
 
 import org.example.App.*;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+
 public class Main {
     public static void main(String[] args) {
         Farmer farmer = Farmer.newFarmer();
@@ -15,4 +19,5 @@ public class Main {
         System.out.println(woodenHorseAdapter.mate(horse));
 
     }
+
 }

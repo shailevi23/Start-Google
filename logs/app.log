@@ -1,0 +1,84 @@
+2022-11-09 16:08:38,108 INFO    com.sun.javafx.tools.packager.Main - loading the file or creating new
+2022-11-09 16:08:38,110 INFO    com.sun.javafx.tools.packager.Main - reading from file
+2022-11-09 16:08:38,120 INFO    com.sun.javafx.tools.packager.Main - userEmail: shai@gmail.comuserName: ShaiLevi userPassword: myPasswordIsGreat23#
+2022-11-09 16:08:38,122 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-09 16:08:38,234 INFO    com.sun.javafx.tools.packager.Main - validate user input:User{id=1109870641, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-09 16:08:38,235 DEBUG   com.sun.javafx.tools.packager.Main - User{id=1109870641, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-09 16:08:38,236 INFO    com.sun.javafx.tools.packager.Main - check valid id: 1109870641
+2022-11-09 16:08:38,238 DEBUG   com.sun.javafx.tools.packager.Main - 1109870641
+2022-11-09 16:08:38,238 INFO    com.sun.javafx.tools.packager.Main - checking regex: shai@gmail.com
+2022-11-09 16:08:38,238 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-09 16:08:38,239 INFO    com.sun.javafx.tools.packager.Main - checking regex: ShaiLevi
+2022-11-09 16:08:38,239 DEBUG   com.sun.javafx.tools.packager.Main - ShaiLevi
+2022-11-09 16:08:38,239 INFO    com.sun.javafx.tools.packager.Main - checking regex: myPasswordIsGreat23#
+2022-11-09 16:08:38,239 DEBUG   com.sun.javafx.tools.packager.Main - myPasswordIsGreat23#
+2022-11-09 16:08:38,240 INFO    com.sun.javafx.tools.packager.Main - validate user registration in DB: User{id=1109870641, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-09 16:08:38,240 DEBUG   com.sun.javafx.tools.packager.Main - User{id=1109870641, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-09 16:08:38,240 INFO    com.sun.javafx.tools.packager.Main - writing to file
+2022-11-09 16:08:38,245 INFO    com.sun.javafx.tools.packager.Main - User has been registered successfully: User{id=1109870641, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-09 16:08:38,249 INFO    com.sun.javafx.tools.packager.Main - validate user login in DB: userEmail: shai@gmail.comuserPassword: myPasswordIsGreat23#
+2022-11-09 16:08:38,249 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-09 16:08:38,250 INFO    com.sun.javafx.tools.packager.Main - The user has logged in successfully and got the following token: fqoji
+2022-11-09 16:08:38,250 DEBUG   com.sun.javafx.tools.packager.Main - fqoji
+2022-11-09 16:08:38,250 INFO    com.sun.javafx.tools.packager.Main - userEmail: shai@gmail.comuserPassword: myPasswordIsGreat23#
+2022-11-09 16:08:38,250 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-09 16:08:38,250 INFO    com.sun.javafx.tools.packager.Main - validate user login in DB: userEmail: shai@gmail.comuserPassword: myPasswordIsGreat23#
+2022-11-09 16:08:38,250 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-09 16:08:38,250 INFO    com.sun.javafx.tools.packager.Main - The user has logged in successfully and got the following token: qxffc
+2022-11-09 16:08:38,250 DEBUG   com.sun.javafx.tools.packager.Main - qxffc
+2022-11-09 16:08:38,252 INFO    com.sun.javafx.tools.packager.Main - tries to update user password: email- shai@gmail.comwith new name: iChangedMyPassword
+2022-11-09 16:08:38,252 DEBUG   com.sun.javafx.tools.packager.Main - qxffc
+2022-11-09 16:08:38,253 INFO    com.sun.javafx.tools.packager.Main - writing to file
+2022-11-09 16:08:38,253 INFO    com.sun.javafx.tools.packager.Main - User password has been updated successfully:)
+2022-11-09 16:08:38,253 INFO    com.sun.javafx.tools.packager.Main - tries to update user name: email- shai@gmail.comwith new name: levi
+2022-11-09 16:08:38,253 DEBUG   com.sun.javafx.tools.packager.Main - qxffc
+2022-11-09 16:08:38,253 INFO    com.sun.javafx.tools.packager.Main - writing to file
+2022-11-09 16:08:38,254 INFO    com.sun.javafx.tools.packager.Main - User's name updated to levi
+2022-11-09 16:08:38,254 INFO    com.sun.javafx.tools.packager.Main - tries to update user email: shai@gmail.comwith new email: levilevi@gmail.com
+2022-11-09 16:08:38,254 DEBUG   com.sun.javafx.tools.packager.Main - qxffc
+2022-11-09 16:08:38,254 INFO    com.sun.javafx.tools.packager.Main - writing to file
+2022-11-09 16:08:38,255 INFO    com.sun.javafx.tools.packager.Main - tries to delete the user: levilevi@gmail.com
+2022-11-09 16:08:38,255 DEBUG   com.sun.javafx.tools.packager.Main - qxffc
+2022-11-09 16:08:38,255 ERROR   com.sun.javafx.tools.packager.Main - Incorrect token or email!, Can't delete the user
+2022-11-09 16:33:26,783 INFO    com.sun.javafx.tools.packager.Main - loading the file or creating new
+2022-11-09 16:33:26,785 INFO    com.sun.javafx.tools.packager.Main - reading from file
+2022-11-09 16:33:26,804 INFO    com.sun.javafx.tools.packager.Main - userEmail: shai@gmail.comuserName: ShaiLevi userPassword: myPasswordIsGreat23#
+2022-11-09 16:33:26,806 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-09 16:33:26,927 INFO    com.sun.javafx.tools.packager.Main - validate user input:User{id=1995139687, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-09 16:33:26,927 DEBUG   com.sun.javafx.tools.packager.Main - User{id=1995139687, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-09 16:33:26,928 INFO    com.sun.javafx.tools.packager.Main - check valid id: 1995139687
+2022-11-09 16:33:26,928 DEBUG   com.sun.javafx.tools.packager.Main - 1995139687
+2022-11-09 16:33:26,928 INFO    com.sun.javafx.tools.packager.Main - checking regex: shai@gmail.com
+2022-11-09 16:33:26,928 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-09 16:33:26,929 INFO    com.sun.javafx.tools.packager.Main - checking regex: ShaiLevi
+2022-11-09 16:33:26,929 DEBUG   com.sun.javafx.tools.packager.Main - ShaiLevi
+2022-11-09 16:33:26,929 INFO    com.sun.javafx.tools.packager.Main - checking regex: myPasswordIsGreat23#
+2022-11-09 16:33:26,929 DEBUG   com.sun.javafx.tools.packager.Main - myPasswordIsGreat23#
+2022-11-09 16:33:26,930 INFO    com.sun.javafx.tools.packager.Main - validate user registration in DB: User{id=1995139687, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-09 16:33:26,930 DEBUG   com.sun.javafx.tools.packager.Main - User{id=1995139687, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-09 16:33:26,930 INFO    com.sun.javafx.tools.packager.Main - writing to file
+2022-11-09 16:33:26,931 INFO    com.sun.javafx.tools.packager.Main - User has been registered successfully: User{id=1995139687, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-09 16:33:26,937 INFO    com.sun.javafx.tools.packager.Main - validate user login in DB: userEmail: shai@gmail.comuserPassword: myPasswordIsGreat23#
+2022-11-09 16:33:26,937 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-09 16:33:26,938 INFO    com.sun.javafx.tools.packager.Main - The user has logged in successfully and got the following token: tkjve
+2022-11-09 16:33:26,938 DEBUG   com.sun.javafx.tools.packager.Main - tkjve
+2022-11-09 16:33:26,938 INFO    com.sun.javafx.tools.packager.Main - userEmail: shai@gmail.comuserPassword: myPasswordIsGreat23#
+2022-11-09 16:33:26,938 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-09 16:33:26,938 INFO    com.sun.javafx.tools.packager.Main - validate user login in DB: userEmail: shai@gmail.comuserPassword: myPasswordIsGreat23#
+2022-11-09 16:33:26,938 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-09 16:33:26,938 INFO    com.sun.javafx.tools.packager.Main - The user has logged in successfully and got the following token: qpvvo
+2022-11-09 16:33:26,939 DEBUG   com.sun.javafx.tools.packager.Main - qpvvo
+2022-11-09 16:33:26,940 INFO    com.sun.javafx.tools.packager.Main - tries to update user password: email- shai@gmail.comwith new name: iChangedMyPassword
+2022-11-09 16:33:26,940 DEBUG   com.sun.javafx.tools.packager.Main - qpvvo
+2022-11-09 16:33:26,940 INFO    com.sun.javafx.tools.packager.Main - writing to file
+2022-11-09 16:33:26,941 INFO    com.sun.javafx.tools.packager.Main - User password has been updated successfully:)
+2022-11-09 16:33:26,941 INFO    com.sun.javafx.tools.packager.Main - tries to update user name: email- shai@gmail.comwith new name: levi
+2022-11-09 16:33:26,941 DEBUG   com.sun.javafx.tools.packager.Main - qpvvo
+2022-11-09 16:33:26,941 INFO    com.sun.javafx.tools.packager.Main - writing to file
+2022-11-09 16:33:26,942 INFO    com.sun.javafx.tools.packager.Main - User's name updated to levi
+2022-11-09 16:33:26,942 INFO    com.sun.javafx.tools.packager.Main - tries to update user email: shai@gmail.comwith new email: levilevi@gmail.com
+2022-11-09 16:33:26,942 DEBUG   com.sun.javafx.tools.packager.Main - qpvvo
+2022-11-09 16:33:26,942 INFO    com.sun.javafx.tools.packager.Main - writing to file
+2022-11-09 16:33:26,943 INFO    com.sun.javafx.tools.packager.Main - tries to delete the user: levilevi@gmail.com
+2022-11-09 16:33:26,943 DEBUG   com.sun.javafx.tools.packager.Main - qpvvo
+2022-11-09 16:33:26,943 ERROR   com.sun.javafx.tools.packager.Main - Incorrect token or email!, Can't delete the user

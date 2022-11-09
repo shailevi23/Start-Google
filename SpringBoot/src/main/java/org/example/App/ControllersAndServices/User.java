@@ -4,10 +4,12 @@ import java.math.BigInteger;
 import java.util.UUID;
 
 public class User {
-    private final int id;
+    private int id;
     private String email;
     private String name;
     private String password;
+
+    public User(){};
 
     public User(String email, String name, String password) {
         this.id = uinqueId();
