@@ -1,4 +1,4 @@
-package org.example.App.ControllersAndServices;
+package org.example.App;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

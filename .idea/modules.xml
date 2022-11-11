@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CreationalPatterns/StartAtGoogle.iml" filepath="$PROJECT_DIR$/CreationalPatterns/StartAtGoogle.iml" />
-      <module fileurl="file://$PROJECT_DIR$/StartAtGoogle-.iml" filepath="$PROJECT_DIR$/StartAtGoogle-.iml" />
     </modules>
   </component>
 </project>

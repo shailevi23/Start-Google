@@ -1,6 +1,5 @@
-package org.example.App.ControllersAndServices;
+package org.example.App;
 
-import org.example.App.Utils.Utility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +25,6 @@ public class AuthService {
             if(usersData.get(userEmail).getPassword().equals(userPassword)){
                 String token = Utility.RandomString(5);
                 tokens.put(token,userEmail);
-                System.out.println("The user has logged in successfully:)");
                 return token;
             }
         throw new IllegalArgumentException("Email or password is illegal!!");
@@ -37,7 +35,6 @@ public class AuthService {
         if(!usersData.isEmpty()) {
             if (usersData.get(user.getEmail()) == null) {
                 this.userRepo.saveNewUser(user);
-                    System.out.println("The user has registered successfully");
                     return validateUserLogin(user.getEmail(), user.getPassword());
             }
             else{

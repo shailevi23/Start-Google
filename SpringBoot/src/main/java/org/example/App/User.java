@@ -1,4 +1,4 @@
-package org.example.App.ControllersAndServices;
+package org.example.App;
 
 import java.math.BigInteger;
 import java.util.UUID;

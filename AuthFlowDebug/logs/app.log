@@ -40,3 +40,45 @@
 2022-11-09 16:59:02,349 INFO    com.sun.javafx.tools.packager.Main - tries to delete the user: levilevi@gmail.com
 2022-11-09 16:59:02,349 DEBUG   com.sun.javafx.tools.packager.Main - axodd
 2022-11-09 16:59:02,349 ERROR   com.sun.javafx.tools.packager.Main - Incorrect token or email!, Can't delete the user
+2022-11-11 19:07:23,789 INFO    com.sun.javafx.tools.packager.Main - loading the file or creating new
+2022-11-11 19:07:23,799 INFO    com.sun.javafx.tools.packager.Main - reading from file
+2022-11-11 19:07:23,829 INFO    com.sun.javafx.tools.packager.Main - userEmail: shai@gmail.comuserName: ShaiLevi userPassword: myPasswordIsGreat23#
+2022-11-11 19:07:23,835 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-11 19:07:24,211 INFO    com.sun.javafx.tools.packager.Main - validate user input:User{id=2113459933, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-11 19:07:24,214 DEBUG   com.sun.javafx.tools.packager.Main - User{id=2113459933, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-11 19:07:24,215 INFO    com.sun.javafx.tools.packager.Main - check valid id: 2113459933
+2022-11-11 19:07:24,215 DEBUG   com.sun.javafx.tools.packager.Main - 2113459933
+2022-11-11 19:07:24,218 INFO    com.sun.javafx.tools.packager.Main - checking regex: shai@gmail.com
+2022-11-11 19:07:24,218 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-11 19:07:24,219 INFO    com.sun.javafx.tools.packager.Main - checking regex: ShaiLevi
+2022-11-11 19:07:24,220 DEBUG   com.sun.javafx.tools.packager.Main - ShaiLevi
+2022-11-11 19:07:24,222 INFO    com.sun.javafx.tools.packager.Main - checking regex: myPasswordIsGreat23#
+2022-11-11 19:07:24,222 DEBUG   com.sun.javafx.tools.packager.Main - myPasswordIsGreat23#
+2022-11-11 19:07:24,224 INFO    com.sun.javafx.tools.packager.Main - validate user registration in DB: User{id=2113459933, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-11 19:07:24,224 DEBUG   com.sun.javafx.tools.packager.Main - User{id=2113459933, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-11 19:07:24,225 INFO    com.sun.javafx.tools.packager.Main - writing to file
+2022-11-11 19:07:24,237 INFO    com.sun.javafx.tools.packager.Main - User has been registered successfully: User{id=2113459933, email='shai@gmail.com', name='ShaiLevi', password='myPasswordIsGreat23#'}
+2022-11-11 19:07:24,247 INFO    com.sun.javafx.tools.packager.Main - validate user login in DB: userEmail: shai@gmail.comuserPassword: myPasswordIsGreat23#
+2022-11-11 19:07:24,248 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-11 19:07:24,250 INFO    com.sun.javafx.tools.packager.Main - The user has logged in successfully and got the following token: kckfw
+2022-11-11 19:07:24,250 DEBUG   com.sun.javafx.tools.packager.Main - kckfw
+2022-11-11 19:07:24,251 INFO    com.sun.javafx.tools.packager.Main - userEmail: shai@gmail.comuserPassword: myPasswordIsGreat23#
+2022-11-11 19:07:24,251 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-11 19:07:24,251 INFO    com.sun.javafx.tools.packager.Main - validate user login in DB: userEmail: shai@gmail.comuserPassword: myPasswordIsGreat23#
+2022-11-11 19:07:24,251 DEBUG   com.sun.javafx.tools.packager.Main - shai@gmail.com
+2022-11-11 19:07:24,252 INFO    com.sun.javafx.tools.packager.Main - The user has logged in successfully and got the following token: ktins
+2022-11-11 19:07:24,252 DEBUG   com.sun.javafx.tools.packager.Main - ktins
+2022-11-11 19:07:24,257 INFO    com.sun.javafx.tools.packager.Main - tries to update user password: email- shai@gmail.comwith new name: iChangedMyPassword
+2022-11-11 19:07:24,258 DEBUG   com.sun.javafx.tools.packager.Main - ktins
+2022-11-11 19:07:24,259 INFO    com.sun.javafx.tools.packager.Main - writing to file
+2022-11-11 19:07:24,259 INFO    com.sun.javafx.tools.packager.Main - User password has been updated successfully:)
+2022-11-11 19:07:24,261 INFO    com.sun.javafx.tools.packager.Main - tries to update user name: email- shai@gmail.comwith new name: levi
+2022-11-11 19:07:24,261 DEBUG   com.sun.javafx.tools.packager.Main - ktins
+2022-11-11 19:07:24,261 INFO    com.sun.javafx.tools.packager.Main - writing to file
+2022-11-11 19:07:24,263 INFO    com.sun.javafx.tools.packager.Main - User's name updated to levi
+2022-11-11 19:07:24,264 INFO    com.sun.javafx.tools.packager.Main - tries to update user email: shai@gmail.comwith new email: levilevi@gmail.com
+2022-11-11 19:07:24,264 DEBUG   com.sun.javafx.tools.packager.Main - ktins
+2022-11-11 19:07:24,265 INFO    com.sun.javafx.tools.packager.Main - writing to file
+2022-11-11 19:07:24,268 INFO    com.sun.javafx.tools.packager.Main - tries to delete the user: levilevi@gmail.com
+2022-11-11 19:07:24,268 DEBUG   com.sun.javafx.tools.packager.Main - ktins
+2022-11-11 19:07:24,268 ERROR   com.sun.javafx.tools.packager.Main - Incorrect token or email!, Can't delete the user
