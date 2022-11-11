@@ -24,7 +24,7 @@ public class AuthService {
         if(usersData.get(userEmail) != null)
             if(usersData.get(userEmail).getPassword().equals(userPassword)){
                 String token = Utility.RandomString(5);
-                tokens.put(token,userEmail);
+                tokens.put(token, userEmail);
                 return token;
             }
         throw new IllegalArgumentException("Email or password is illegal!!");

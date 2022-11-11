@@ -27,12 +27,21 @@ public class UserService {
         else
             return userExists;
     }
+
+    private boolean isEmailExist(String userEmail){
+        Map<String, User> usersData = this.userRepo.getUsersData();
+        User userExists = usersData.get(userEmail);
+        return userExists != null;
+    }
     void deleteUser(String userEmail){
         User userExists = isUser(userEmail);
         this.userRepo.deleteUser(userExists);
     }
 
     User updateUserEmail(String userEmail , String newEmail){
+        if(isEmailExist(newEmail)){
+            throw new IllegalArgumentException("User already registered with this email");
+        }
         User userExists = isUser(userEmail);
         userExists.setEmail(newEmail);
         this.userRepo.updateUserEmail(userEmail,userExists);
