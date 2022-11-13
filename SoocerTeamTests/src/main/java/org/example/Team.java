@@ -32,6 +32,9 @@ public class Team {
     }
 
     public void setPlayers(ArrayList<Player> players) {
+        if(players == null){
+            throw new NullPointerException("Players list is null");
+        }
         this.players = players;
     }
 
@@ -48,6 +51,14 @@ public class Team {
     }
 
     public void setTeamName(String teamName) {
+        if(teamName == null){
+            throw new NullPointerException("Team name cannot be null");
+        }
+
+        if(teamName.equals("")){
+            throw new IllegalArgumentException("Team name cannot be empty");
+        }
+
         this.teamName = teamName;
     }
 
@@ -75,9 +86,9 @@ public class Team {
         return team;
     }
 
-    public static final Team teamFormationOneThreeFourThree(ArrayList<Player> playersList, String teamName){
+    public static final Team teamFormationOneThreeFourThree(String teamName){
         Team team = new Team();
-        team.setPlayers(playersList);
+        team.setPlayers(new ArrayList<Player>());
         team.setTeamName(teamName);
         team.setFormation(new ArrayList<> (Arrays.asList(
                 Position.GK,

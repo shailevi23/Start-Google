@@ -52,7 +52,13 @@ class PlayerTest {
 
     @Test
     void setName_nameIsNull_throwsException() {
-        assertThrows(IllegalArgumentException.class, () -> player.setName(null), "expected IllegalArgumentException and throw other exception");
+        assertThrows(NullPointerException.class, () -> player.setName(null), "expected NullPointerException and other exception was thrown");
+    }
+
+    @Test
+    void setName_validName_isEquals() {
+        player.setName("newName");
+        assertEquals(player.getName(),"newName");
     }
 
     @Test
@@ -62,7 +68,7 @@ class PlayerTest {
 
     @Test
     void setJersey_negativeJersey_throwException() {
-        assertThrows(IllegalArgumentException.class, () -> player.setJersey(-1), "expected IllegalArgumentException and throw other exception");
+        assertThrows(IllegalArgumentException.class, () -> player.setJersey(-1), "expected IllegalArgumentException and other exception was thrown");
     }
 
     @Test
@@ -73,7 +79,13 @@ class PlayerTest {
 
     @Test
     void setGrade_negativeGrade_throwsException() {
-        assertThrows(IllegalArgumentException.class, () -> player.setGrade(-1), "expected IllegalArgumentException and throw other exception");
+        assertThrows(IllegalArgumentException.class, () -> player.setGrade(-1), "expected IllegalArgumentException and other exception was thrown");
+    }
+
+    @Test
+    void setGrade_validGrade_isEquals() {
+        player.setGrade(4);
+        assertEquals(player.getGrade(),4);
     }
 
     @Test
@@ -83,12 +95,12 @@ class PlayerTest {
 
     @Test
     void setPos_positionNull_throwException() {
-        assertThrows(IllegalArgumentException.class, () -> player.setPos(null), "expected IllegalArgumentException and throw other exception");
+        assertThrows(NullPointerException.class, () -> player.setPos(null), "expected NullPointerException and other exception was thrown");
     }
 
     @Test
     void player_playerWithNegativeJersey_throwException(){
-        assertThrows(IllegalArgumentException.class, () -> Player.deafultPLayer("name",-9, 1, Position.DEF), "expected IllegalArgumentException and throw other exception");
+        assertThrows(IllegalArgumentException.class, () -> Player.deafultPLayer("name",-9, 1, Position.DEF), "expected IllegalArgumentException and other exception was thrown");
     }
 
     @Test
