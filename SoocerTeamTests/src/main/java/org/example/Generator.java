@@ -16,15 +16,17 @@ public class Generator {
     public static void createSoccerTeam(Team team, int teamSize){
 
         ArrayList<String> playerNames = new ArrayList<>();
-        ArrayList<Integer> jerseyNumbers = new ArrayList<>();
         //init
         createPlayerNames(playerNames, teamSize);
-        createJerseyNumbers(jerseyNumbers);
         createPlayerPositionsArray(team.getFormation(), teamSize);
 
+        ArrayList<Position> positionsList = team.getFormation();
+
         for (int i = 0; i < teamSize; i++) {
-            team.players.add(createPlayer(jerseyNumbers, team.getFormation(), playerNames));
+            team.players.add(createPlayer(team.getJerseyNumbers(), team.getFormation(), playerNames));
         }
+
+        team.setFormation(positionsList);
     }
 
     private static Player createPlayer(ArrayList<Integer> jerseyNumbersList,
@@ -34,20 +36,11 @@ public class Generator {
                 retValAndRmFromList(jerseyNumbersList), randomInt(10), retValAndRmFromList(positionsList));
     }
 
-    private static void createJerseyNumbers(ArrayList<Integer> jerseyNumbers){
-        for (int i = 1; i <= 99; i++)
-        {
-            jerseyNumbers.add(i);
-        }
-        Collections.shuffle(jerseyNumbers); //to diversify and get multiple teams on output
-    }
-
     private static void createPlayerNames(ArrayList<String> playerNames, int teamSize){
 
         for (int i = 0; i < teamSize; i++) {
             playerNames.add(nameGenerator.generatePlayerName());
         }
-        //playerNames.addAll(Arrays.asList("Messi", "Ronaldo", "Haaland", "Mbappe", "Neymar", "Dounnaroumma", "Drogba", "Pele", "Ramos", "Puyol", "Shai", "Foden", "Lampard", "Gerard"));
     }
 
     private static <T> T retValAndRmFromList(ArrayList<T> list){

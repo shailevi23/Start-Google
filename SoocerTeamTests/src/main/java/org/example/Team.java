@@ -6,13 +6,17 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Team {
     ArrayList<Player> players;
     ArrayList<Position> formation;
     String teamName;
 
+    ArrayList<Integer> jerseyNumbers;
+
     private Team() {
+        createJerseyNumbers();
     }
 
     public ArrayList<Position> getFormation() {
@@ -29,6 +33,14 @@ public class Team {
 
     public void setPlayers(ArrayList<Player> players) {
         this.players = players;
+    }
+
+    public ArrayList<Integer> getJerseyNumbers() {
+        return jerseyNumbers;
+    }
+
+    public void setJerseyNumbers(ArrayList<Integer> jerseyNumbers) {
+        this.jerseyNumbers = jerseyNumbers;
     }
 
     public String getTeamName() {
@@ -75,6 +87,15 @@ public class Team {
         return team;
     }
 
+    private void createJerseyNumbers(){
+        jerseyNumbers = new ArrayList<>();
+        for (int i = 1; i <= 99; i++)
+        {
+            jerseyNumbers.add(i);
+        }
+        Collections.shuffle(jerseyNumbers); //to diversify and get multiple teams on output
+    }
+
     public static void writeTeamDataToFile(Team team) {
         try (FileOutputStream fos = new FileOutputStream("mytxt.txt");
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {
@@ -96,4 +117,5 @@ public class Team {
                 ", name='" + teamName + '\'' +
                 '}';
     }
+
 }

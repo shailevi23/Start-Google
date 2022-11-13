@@ -43,9 +43,9 @@ public class Player {
         player.setPos(Position.GK);
         return player;
     }
-    public static Player bestPlayer(String name,  int jersey, int grade, Position pos) {
+    public static Player bestPlayer(String name,  int jersey, Position pos) {
         Player player = new Player();
-        player.setGrade(5);
+        player.setGrade(10);
         player.setJersey(jersey);
         player.setName(name);
         player.setPos(pos);
@@ -56,7 +56,7 @@ public class Player {
         Player player = new Player();
         player.setGrade(grade);
         player.setJersey(jersey);
-        player.setName("");
+        player.setName("None");
         player.setPos(pos);
         return player;
     }
@@ -66,6 +66,9 @@ public class Player {
     }
 
     public void setName(String name) {
+        if(name == null || name.equals("")){
+            throw new IllegalArgumentException("name cant be empty");
+        }
         this.name = name;
     }
 
@@ -74,6 +77,9 @@ public class Player {
     }
 
     public void setJersey(int jersey) {
+        if(jersey < 0 || jersey > 99){
+            throw new IllegalArgumentException("jersey number not valid");
+        }
         this.jersey = jersey;
     }
 
@@ -92,6 +98,9 @@ public class Player {
     }
 
     public void setGrade(int grade) {
+        if(grade < 0 || grade > 10){
+            throw new IllegalArgumentException("grade between 0 to 10");
+        }
         this.grade = grade;
     }
 
@@ -100,6 +109,9 @@ public class Player {
     }
 
     public void setPos(Position pos) {
+        if(pos == null){
+            throw new IllegalArgumentException("position cannot be null");
+        }
         this.pos = pos;
     }
 }
