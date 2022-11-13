@@ -1,9 +1,10 @@
 package org.gfg;
 
-import org.testng.annotations.Test;
+
+import org.junit.jupiter.api.Test;
 
 public class JunitTest {
-    @Test
+@Test
     public void testMethod(){
 
     }

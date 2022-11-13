@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SoocerTeamTests" />
         <module name="FarmAdapter" />
         <module name="SpringBoot" />
         <module name="StructrualPatterns" />
@@ -13,6 +14,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="SoccerTeam" target="9" />
+      <module name="SoccerTeamTests" target="9" />
       <module name="StartAtGoogle-" target="9" />
     </bytecodeTargetLevel>
   </component>
