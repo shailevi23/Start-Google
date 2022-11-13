@@ -42,7 +42,7 @@ class PlayerTest {
     @Test
     void noNamePlayer_nameIsNone_isEquals() {
         Player player = Player.noNamePlayer(10,5,Position.GK);
-        assertEquals(player.getName(), "None");
+        assertEquals(player.getName(), "");
     }
 
     @Test
@@ -105,7 +105,7 @@ class PlayerTest {
 
     @Test
     void player_playerWithNullPosition_throwException(){
-        assertThrows(IllegalArgumentException.class, () -> Player.deafultPLayer("name", 1, 8, null), "expected IllegalArgumentException but something else thrown");
+        assertThrows(NullPointerException.class, () -> Player.deafultPLayer("name", 1, 8, null), "expected NullPointerException but something else thrown");
     }
 
 }
