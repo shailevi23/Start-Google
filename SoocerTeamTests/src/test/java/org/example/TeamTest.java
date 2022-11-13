@@ -40,27 +40,41 @@ class TeamTest {
     }
 
     @Test
-    void setPlayers() {
+    void setPlayers_playersSetNull_throwsException() {
+        assertThrows(NullPointerException.class, () -> team.setPlayers(new ArrayList<>(Arrays.asList(null))), "expected NullPointerException and other exception was thrown");
     }
 
     @Test
-    void getTeamName() {
+    void getTeamName_nameIsBarcelona_isEquals() {
+        assertEquals(team.getTeamName(), "barcelona");
     }
 
     @Test
-    void setTeamName() {
+    void setTeamName_teamNameNull_throwException() {
+        assertThrows(NullPointerException.class, () -> team.setTeamName(null), "expected NullPointerException and other exception was thrown");
     }
 
     @Test
-    void teamFormationOneFourFourTwo() {
+    void setTeamName_teamNameEmpty_throwException() {
+        assertThrows(IllegalArgumentException.class, () -> team.setTeamName(""), "expected IllegalArgumentException and other exception was thrown");
+    }
+
+    @Test
+    void teamFormationOneFourFourTwo_teamNotNull_isNotNull() {
+        Team team = Team.teamFormationOneFourFourTwo("barcelona");
+        assertNotNull(team);
     }
 
     @Test
     void teamFormationOneFiveFourOne() {
+        Team team = Team.teamFormationOneFiveFourOne("barcelona");
+        assertNotNull(team);
     }
 
     @Test
     void teamFormationOneThreeFourThree() {
+        Team team = Team.teamFormationOneThreeFourThree("barcelona");
+        assertNotNull(team);
     }
 
 }

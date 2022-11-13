@@ -56,7 +56,7 @@ public class Player {
         Player player = new Player();
         player.setGrade(grade);
         player.setJersey(jersey);
-        player.setName("None");
+        player.setName("");
         player.setPos(pos);
         return player;
     }
@@ -66,8 +66,8 @@ public class Player {
     }
 
     public void setName(String name) {
-        if(name == null || name.equals("")){
-            throw new IllegalArgumentException("name cant be empty");
+        if(name == null){
+            throw new NullPointerException("name cannot be null");
         }
         this.name = name;
     }
@@ -86,7 +86,6 @@ public class Player {
     public int getGrade() {
         return grade;
     }
-
     @Override
     public String toString() {
         return "Player{" +
@@ -110,7 +109,7 @@ public class Player {
 
     public void setPos(Position pos) {
         if(pos == null){
-            throw new IllegalArgumentException("position cannot be null");
+            throw new NullPointerException("position cannot be null");
         }
         this.pos = pos;
     }
